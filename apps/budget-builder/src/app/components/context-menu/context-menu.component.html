@@ -1,0 +1,11 @@
+<div
+  id="contextMenu"
+  class="absolute"
+  [ngClass]="{ block: !!contextMenu().isShown, hidden: !contextMenu().isShown }"
+  (contextmenu)="$event.preventDefault()"
+>
+  <ul class="menu flex flex-col rounded-md shadow-xl overflow-hidden">
+    <!-- Apply to All -->
+    <li (click)="applyToAll()" role="presentation" class="context-menu-item">Apply to All</li>
+  </ul>
+</div>
